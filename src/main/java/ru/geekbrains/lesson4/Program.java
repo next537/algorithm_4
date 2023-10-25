@@ -25,19 +25,13 @@ public class Program {
         addResult = hashMap.put("+7900111223309", "EEEEEEE8");
 
         try {
-            String searchResult = hashMap.get("+7900111223307");
+            String searchResult = hashMap.get("+7900111223300");
             System.out.println(searchResult);
         } catch (NullPointerException e) {
             System.out.println("Key not found");
         }
-
-        String searchResult = hashMap.get("+7900111223307");
-
-        System.out.println(hashMap);
-
-        for (HashMap.Entry<String, String> entity : hashMap.entrySet()) {
-            System.out.printf("%s - %s", entity.getKey(), entity.getValue());
-        }
+        String hashMapString = hashMap.toString();
+        System.out.println(hashMapString);
     }
 
 }
